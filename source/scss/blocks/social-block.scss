@@ -89,6 +89,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition-duration: 0.5s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
