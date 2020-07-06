@@ -29,6 +29,12 @@
   }
 }
 
+.active {
+  & .form__field {
+    transform: translateX(0);
+  }
+}
+
 .form__field {
   flex: none;
   margin-right: 3rem;
@@ -43,6 +49,8 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  transform: translateX(-3000px);
+  transition-duration: 1s;
 
   &:focus {
     border: 1px solid $c-purple;

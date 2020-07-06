@@ -1,8 +1,12 @@
 import Swiper from "swiper";
+import * as animation from '../common/animation-library';
 
 export default () => {
   let storySlider;
   let sliderContainer = document.getElementById(`story`);
+  let sliderItemText = document.querySelectorAll(`.slider__item-text`);
+
+  animation.moveRight(sliderItemText);
   sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
 
   const setSlider = function () {
@@ -17,6 +21,7 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            animation.moveRight(sliderItemText);
             if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
             } else if (storySlider.activeIndex === 2 || storySlider.activeIndex === 3) {
@@ -51,6 +56,8 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            animation.moveRight(sliderItemText);
+
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
             } else if (storySlider.activeIndex === 2) {

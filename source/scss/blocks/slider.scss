@@ -96,6 +96,8 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  margin-right: -20px;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
